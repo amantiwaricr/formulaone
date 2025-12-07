@@ -118,33 +118,33 @@ function Checkout() {
               <div className="form-section">
                 <div className="form-group">
                   <label>Full Name</label>
-                  <input type="text" placeholder="John Doe" required />
+                  <input type="text" placeholder="Enter your name" required />
                 </div>
                 <div className="form-group">
                   <label>Email</label>
-                  <input type="email" placeholder="john@example.com" required />
+                  <input type="email" placeholder="enter your mail" required />
                 </div>
               </div>
 
               <div className="form-section">
                 <div className="form-group">
                   <label>Address</label>
-                  <input type="text" placeholder="123 Main Street" required />
+                  <input type="text" required />
                 </div>
                 <div className="form-group">
                   <label>City</label>
-                  <input type="text" placeholder="New York" required />
+                  <input type="text" required />
                 </div>
               </div>
 
               <div className="form-section">
                 <div className="form-group">
                   <label>State / Province</label>
-                  <input type="text" placeholder="NY" required />
+                  <input type="text" required />
                 </div>
                 <div className="form-group">
                   <label>ZIP / Postal Code</label>
-                  <input type="text" placeholder="10001" required />
+                  <input type="text" required />
                 </div>
               </div>
 
@@ -152,7 +152,7 @@ function Checkout() {
                 <h3>Payment Information</h3>
                 <div className="form-group">
                   <label>Card Number</label>
-                  <input type="text" placeholder="4532 1234 5678 9010" required />
+                  <input type="text" required />
                 </div>
               </div>
 
