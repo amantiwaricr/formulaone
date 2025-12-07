@@ -1,0 +1,188 @@
+.team-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #2a2a2a;
+  position: relative;
+  cursor: pointer;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 0, 0, 0.05) 0%, rgba(30, 65, 255, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.team-card.hovered {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #dc0000;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(220, 0, 0, 0.3),
+    0 0 40px rgba(30, 65, 255, 0.2);
+}
+
+.team-card.hovered::before {
+  opacity: 1;
+}
+
+.team-header {
+  padding: 24px 24px 16px;
+  border-top: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-color-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.team-card.hovered .team-name {
+  color: #dc0000;
+}
+
+.team-nationality {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0;
+  font-weight: 500;
+}
+
+.driver-section {
+  padding: 16px 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.driver-photo-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.driver-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a2a2a;
+  transition: all 0.4s ease;
+}
+
+.team-card.hovered .driver-photo {
+  border-color: #dc0000;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(220, 0, 0, 0.4);
+}
+
+.driver-number {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: white;
+  border: 2px solid #0d0d0d;
+  transition: transform 0.3s ease;
+}
+
+.team-card.hovered .driver-number {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.driver-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.driver-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.driver-info .driver-nationality {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0;
+}
+
+.card-footer {
+  padding: 12px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.primary-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #dc0000 0%, #1e41ff 100%);
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.team-card.hovered .primary-badge {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(220, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    margin: 0 auto;
+  }
+
+  .driver-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .driver-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-name {
+    font-size: 1.3rem;
+  }
+
+  .driver-name {
+    font-size: 1.1rem;
+  }
+}
